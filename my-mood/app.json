@@ -45,14 +45,9 @@
 			"name": "date"
 		},
 		{
-			"type": "property",
+			"type": "spacer",
 			"scope": "entry",
-			"settings": {
-				"type": "text",
-				"appearance": "line",
-				"multiline": true
-			},
-			"name": "notes"
+			"settings": {}
 		},
 		{
 			"type": "property",
@@ -63,6 +58,16 @@
 				"default": "[$previous.mood]"
 			},
 			"name": "mood"
+		},
+		{
+			"type": "property",
+			"scope": "entry",
+			"settings": {
+				"type": "text",
+				"appearance": "line",
+				"multiline": true
+			},
+			"name": "notes"
 		}
 	],
 	"root": [
@@ -80,5 +85,15 @@
 			}
 		}
 	],
-	"charts": []
+	"charts": [
+		{
+			"type": "chart",
+			"scope": "charts",
+			"settings": {
+				"type": "pie",
+				"aggregate": "count",
+				"group_by": "mood"
+			}
+		}
+	]
 }
