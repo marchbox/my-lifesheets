@@ -51,7 +51,7 @@
 				<div property="notes" data-type="property" class="appearance-line type-text"></div>
 				<div class="field-row">
 					<span property="project" data-type="property" mv-default="Personal" mv-options="Personal, Synergy, Breeze, Quest" class="type-options"></span>
-					<span data-type="expression" data-prefix="$" mv-value="(50 * hours(duration))"></span>
+					<span data-type="expression" data-prefix="$" mv-value="if(project = &quot;Personal&quot;, 0, (50 * hours(duration)))"></span>
 				</div>
 			</article>
 		</section>
