@@ -54,6 +54,7 @@
 		<a id=entries></a>
 			<div class="field-row">
 				<button data-type="action" data-show="edit" mv-action="add(entry)">➕ Add Smoke</button>
+				<span data-type="spacer" class="appearance-stretch"></span>
 				<span data-type="expression" data-prefix="Time since trying to quit " mv-value="duration($now - first(date_time))"></span>
 			</div>
 		<section mv-list="entry">
