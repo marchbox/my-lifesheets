@@ -25,12 +25,32 @@
 			<span class="app-name">My mood</span>
 		</h1>
 		<h2>mood tracker</h2>
-		<div class="mv-bar mv-ui"></div>
+		<div class="mv-bar mv-ui"><a href="#entries" class="mv-button custom entries">Entries</a></div>
 	</header>
 
 	<main class="charts-first">
 		<a id=stats></a>
-			
+			<div class="chart-row">
+				<figure data-type="chart" class="chart appearance-stretch type-pie" style="min-width: min(300px, 100vw)">
+	
+	<h-chart type="pie" x="b">
+		<table>
+			<thead>
+				<tr>
+					<th hc-name="a">Mood</th>
+					<th hc-name="b">Number of moods</th>
+				</tr>
+			</thead>
+			<tbody mv-list="chart8" mv-value="sort(groupBy(entry.entry, entry.mood), '$value')">
+				<tr mv-list-item mv-group>
+					<td>[$value]</td>
+					<td>[count($items)]</td>
+				</tr>
+			</tbody>
+		</table>
+	</h-chart>
+	<figcaption>Number of moods per mood value</figcaption></figure>
+			</div>
 		<a id=entries></a>
 			<div class="field-row">
 				<button data-type="action" data-show="edit" mv-action="add(entry)">➕ Add mood</button>
@@ -40,11 +60,10 @@
 				<header class="field-row">
 					<span property="weekday" data-type="expression" mv-value="weekday(date, 'shortname')"></span>
 					<time property="date" data-type="property" mv-default="[$today]" mv-edit-type="inline" mv-editor-type="date" class="bold type-date"></time>
+					<span data-type="spacer" class="appearance-stretch"></span>
+					<span property="mood" data-type="property" mv-default="[$previous.mood]" mv-options="Excited, Happy, Meh, Anxious, Depressed, Angry" class="type-options"></span>
 				</header>
 				<div property="notes" data-type="property" class="appearance-line type-text"></div>
-				<div class="field-row">
-					<span property="mood" data-type="property" mv-default="[$previous.mood]" mv-options="Excited, Happy, Meh, Anxious, Depressed, Angry" class="type-options"></span>
-				</div>
 			</article>
 		</section>
 	</main>
