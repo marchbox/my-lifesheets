@@ -11,5 +11,18 @@
 		"storage": "",
 		"charts_placement": "",
 		"entries_name": "Smokes"
+	},
+	"work-time-tracker": {
+		"name": "Work time tracker",
+		"slug": "work-time-tracker",
+		"entry_name": "Work",
+		"description": "Work tracker",
+		"private": false,
+		"icon": "😀",
+		"color": "#0cc4e9",
+		"storageType": "",
+		"storage": "",
+		"charts_placement": "",
+		"entries_name": "Works"
 	}
 }
