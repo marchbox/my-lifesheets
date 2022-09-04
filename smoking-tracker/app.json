@@ -115,6 +115,11 @@
 			}
 		},
 		{
+			"type": "spacer",
+			"scope": "root",
+			"settings": {}
+		},
+		{
 			"type": "expression",
 			"scope": "root",
 			"settings": {
