@@ -165,7 +165,7 @@
 			"scope": "entry",
 			"settings": {
 				"prefix": "$",
-				"expression": "(50 * hours(duration))"
+				"expression": "if(project = \"Personal\", 0, (50 * hours(duration)))"
 			}
 		}
 	],
