@@ -1,0 +1,15 @@
+{
+	"smoking-tracker": {
+		"name": "Smoking Tracker",
+		"slug": "smoking-tracker",
+		"entry_name": "Smoke",
+		"description": "Smoke tracker",
+		"private": false,
+		"icon": "🚬",
+		"color": "#e90c0c",
+		"storageType": "",
+		"storage": "",
+		"charts_placement": "",
+		"entries_name": "Smokes"
+	}
+}
