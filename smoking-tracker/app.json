@@ -91,6 +91,13 @@
 				"max": 10
 			},
 			"name": "number_of_cigarettes"
+		},
+		{
+			"type": "expression",
+			"scope": "entry",
+			"settings": {
+				"expression": "number_of_cigarettes"
+			}
 		}
 	],
 	"root": [
@@ -108,5 +115,13 @@
 			}
 		}
 	],
-	"charts": []
+	"charts": [
+		{
+			"type": "chart",
+			"scope": "charts",
+			"settings": {
+				"type": "table"
+			}
+		}
+	]
 }
