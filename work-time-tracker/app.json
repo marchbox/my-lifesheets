@@ -166,7 +166,17 @@
 			"settings": {
 				"prefix": "$",
 				"expression": "if(project = \"Personal\", 0, (50 * hours(duration)))"
-			}
+			},
+			"name": "earning"
+		},
+		{
+			"type": "expression",
+			"scope": "entry",
+			"settings": {
+				"expression": "hours(duration)",
+				"visible": "false"
+			},
+			"name": "hours"
 		}
 	],
 	"root": [
@@ -182,7 +192,27 @@
 				"set_pairs": [],
 				"filter_pairs": []
 			}
+		},
+		{
+			"type": "expression",
+			"scope": "root",
+			"settings": {
+				"prefix": "Total earning: $",
+				"expression": "sum(earning)"
+			}
 		}
 	],
-	"charts": []
+	"charts": [
+		{
+			"type": "chart",
+			"scope": "charts",
+			"settings": {
+				"type": "pie",
+				"aggregate_of": "hours",
+				"group_by": "project",
+				"caption": "Hours per project",
+				"aggregate": "sum"
+			}
+		}
+	]
 }
