@@ -31,8 +31,9 @@
 	<main class="charts-first">
 		<a id=stats></a>
 			<div class="chart-row">
-				<figure data-type="chart" class="chart appearance-stretch type-table" style="min-width: min(300px, 100vw)">
+				<figure data-type="chart" class="chart appearance-stretch type-bar" style="min-width: min(300px, 100vw)">
 	
+	<h-chart type="bar" x="b">
 		<table>
 			<thead>
 				<tr>
@@ -40,18 +41,20 @@
 					<th hc-name="b">Number of Smokes</th>
 				</tr>
 			</thead>
-			<tbody mv-list="chart10" mv-value="groupBy(entry.entry, readable_datetime(entry.date, 'month'))">
+			<tbody mv-list="chart9" mv-value="groupBy(entry.entry, readable_datetime(entry.date, 'month'))">
 				<tr mv-list-item mv-group>
 					<td>[$value]</td>
 					<td>[count($items)]</td>
 				</tr>
 			</tbody>
 		</table>
+	</h-chart>
 	<figcaption>Number of Smokes per month</figcaption></figure>
 			</div>
 		<a id=entries></a>
 			<div class="field-row">
 				<button data-type="action" data-show="edit" mv-action="add(entry)">➕ Add Smoke</button>
+				<span data-type="expression" data-prefix="Time since trying to quit " mv-value="duration($now - first(date_time))"></span>
 			</div>
 		<section mv-list="entry">
 			<article mv-list-item class="entry">
