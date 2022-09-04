@@ -159,6 +159,14 @@
 				"default": "Personal"
 			},
 			"name": "project"
+		},
+		{
+			"type": "expression",
+			"scope": "entry",
+			"settings": {
+				"prefix": "$",
+				"expression": "(50 * hours(duration))"
+			}
 		}
 	],
 	"root": [
