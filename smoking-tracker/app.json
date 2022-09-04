@@ -113,6 +113,15 @@
 				"set_pairs": [],
 				"filter_pairs": []
 			}
+		},
+		{
+			"type": "expression",
+			"scope": "root",
+			"settings": {
+				"prefix": "Time since trying to quit ",
+				"suffix": "",
+				"expression": "duration($now - first(date_time))"
+			}
 		}
 	],
 	"charts": [
@@ -120,7 +129,7 @@
 			"type": "chart",
 			"scope": "charts",
 			"settings": {
-				"type": "table"
+				"type": "bar"
 			}
 		}
 	]
