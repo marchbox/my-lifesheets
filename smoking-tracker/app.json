@@ -115,6 +115,22 @@
 			}
 		},
 		{
+			"type": "action",
+			"scope": "root",
+			"settings": {
+				"target_preset": "new",
+				"target": "add(entry)",
+				"set_pairs": [
+					{
+						"name": "number_of_cigarettes",
+						"value": "2"
+					}
+				],
+				"filter_pairs": [],
+				"label": "Add 2 cigeratts"
+			}
+		},
+		{
 			"type": "spacer",
 			"scope": "root",
 			"settings": {}
