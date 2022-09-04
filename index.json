@@ -24,5 +24,18 @@
 		"storage": "",
 		"charts_placement": "",
 		"entries_name": "Works"
+	},
+	"my-mood": {
+		"name": "My mood",
+		"slug": "my-mood",
+		"entry_name": "mood",
+		"description": "mood tracker",
+		"private": false,
+		"icon": "😀",
+		"color": "#0cc4e9",
+		"storageType": "",
+		"storage": "",
+		"charts_placement": "",
+		"entries_name": "moods"
 	}
 }
